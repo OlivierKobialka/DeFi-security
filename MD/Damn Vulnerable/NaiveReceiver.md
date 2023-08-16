@@ -11,7 +11,6 @@ This funcion allows users to borrow ETH from the pool. The pool will only send t
 
 [NaiveReceiverLenderPool.sol:](/CTF%20-%20Damn%20Vulnerable/contracts/naive-receiver/NaiveReceiverLenderPool.sol)
 ```solidity
-```solidity
 function flashLoan(address borrower, uint256 borrowAmount) external nonReentrant {
 
         uint256 balanceBefore = address(this).balance;
