@@ -14,7 +14,9 @@ this function takes a uint256 borrowAmount as a parameter.
 function flashLoan(uint256 borrowAmount) external nonReentrant {}
 ```
 
-now we need to inspect variable poolBalance:
+now we need to inspect variable poolBalance in [UnstoppableLender.sol](/CTF%20-%20Damn%20Vulnerable/contracts/unstoppable/UnstoppableLender.sol) file.
+
+```solidity]:
 
 1. ```solidity
    uint256 public poolBalance;
@@ -31,13 +33,15 @@ now we need to inspect variable poolBalance:
    assert(poolBalance == balanceBefore);
    ```
 
-## Best place to exploit
+## [Best place to exploit](/CTF%20-%20Damn%20Vulnerable/contracts/unstoppable/UnstoppableLender.sol)
+
+```solidity
 
 ```solidity
 assert(poolBalance == balanceBefore);
 ```
 
-## Exploit
+## [Exploit](/CTF%20-%20Damn%20Vulnerable/test/unstoppable/unstoppable.challenge.js)
 
 ```javascript
 it("Exploit", async function () {
