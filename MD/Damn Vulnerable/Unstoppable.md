@@ -34,7 +34,7 @@ now we need to inspect variable poolBalance:
 ## Best place to exploit
 
 ```solidity
-   assert(poolBalance == balanceBefore);
+assert(poolBalance == balanceBefore);
 ```
 
 ## Exploit
