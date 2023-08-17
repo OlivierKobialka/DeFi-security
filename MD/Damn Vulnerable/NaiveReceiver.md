@@ -9,8 +9,7 @@ Take all ETH out of the user’s contract. If possible, in a single transaction.
 <br />
 This funcion allows users to borrow ETH from the pool. The pool will only send the ETH if the user’s contract has enough balance to pay the fee.
 
-[NaiveReceiverLenderPool.sol:](/CTF%20-%20Damn%20Vulnerable/contracts/naive-receiver/NaiveReceiverLenderPool.sol)
-```solidity
+## [NaiveReceiverLenderPool.sol:](/CTF%20-%20Damn%20Vulnerable/contracts/naive-receiver/NaiveReceiverLenderPool.sol)
 ```solidity
 function flashLoan(address borrower, uint256 borrowAmount) external nonReentrant {
 
