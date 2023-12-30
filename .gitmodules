@@ -1,0 +1,9 @@
+[submodule "audits/6-thunder-loan-audit-main/lib/forge-std"]
+	path = audits/6-thunder-loan-audit-main/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "audits/6-thunder-loan-audit-main/lib/openzeppelin-contracts"]
+	path = audits/6-thunder-loan-audit-main/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "audits/6-thunder-loan-audit-main/lib/openzeppelin-contracts-upgradeable"]
+	path = audits/6-thunder-loan-audit-main/lib/openzeppelin-contracts-upgradeable
+	url = https://github.com/openzeppelin/openzeppelin-contracts-upgradeable
