@@ -50,7 +50,12 @@ contract BuffMockPoolFactory {
         }
         string memory liquidityTokenName = string.concat("T-Swap ", "LP");
         string memory liquidityTokenSymbol = string.concat("ts", "LPT");
-        BuffMockTSwap tPool = new BuffMockTSwap(tokenAddress, i_weth, liquidityTokenName, liquidityTokenSymbol);
+        BuffMockTSwap tPool = new BuffMockTSwap(
+            tokenAddress,
+            i_weth,
+            liquidityTokenName,
+            liquidityTokenSymbol
+        );
         s_pools[tokenAddress] = address(tPool);
         s_tokens[address(tPool)] = tokenAddress;
         emit PoolCreated(tokenAddress, address(tPool));
